@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main-title {
-        font-size: 3.8rem;
+        font-size: 5rem;
         font-weight: 800;
         color: #75AADB;
         text-align: center;
