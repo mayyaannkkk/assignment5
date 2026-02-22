@@ -174,67 +174,7 @@ tab1, tab2, tab3 = st.tabs([
 # ════════════════════════════════════════════════════════════════════════════
 # TAB 1 — Overall Performance
 # ════════════════════════════════════════════════════════════════════════════
-with tab1:
 
-
-    st.markdown('<p class="section-header">Performance Radar Across Four Eras</p>',
-                unsafe_allow_html=True)
-
-    eras = {
-        "Maradona Era (1979–1990)":  (1979, 1990),
-        "Post-Maradona (1991–2004)": (1991, 2004),
-        "Messi Early (2005–2014)":   (2005, 2014),
-        "Messi Peak (2015–2025)":    (2015, 2025),
-    }
-    radar_cats  = ["Win Rate %", "Avg Goals Scored", "Avg Goals Conceded (inv)",
-                   "Clean Sheet %", "Draw Avoidance %"]
-    era_colors  = ["#75AADB","#F6BE00","#D6001C","#4CAF50"]
-
-    fig_radar = go.Figure()
-    for (era_name, (y1, y2)), color in zip(eras.items(), era_colors):
-        sub = df[(df["year"] >= y1) & (df["year"] <= y2)]
-        if len(sub) == 0:
-            continue
-        wr   = (sub["result"] == "Win").mean() * 100
-        asc  = sub["arg_scored"].mean() * 20
-        acc  = max((1 - sub["arg_conceded"].mean() / 4) * 100, 0)
-        cs   = (sub["arg_conceded"] == 0).mean() * 100
-        da   = (sub["result"] != "Draw").mean() * 100
-        vals = [wr, asc, acc, cs, da] + [wr]   # close the polygon
-        cats = radar_cats + [radar_cats[0]]
-
-        fig_radar.add_trace(go.Scatterpolar(
-            r=vals, theta=cats,
-            fill="toself", name=era_name,
-            line_color=color, fillcolor=color, opacity=0.25,
-        ))
-
-    fig_radar.update_layout(
-        polar=dict(
-            radialaxis=dict(visible=True, range=[0, 100],
-                            tickfont=dict(color="#aaaaaa"), gridcolor="#333"),
-            angularaxis=dict(tickfont=dict(color="#cccccc"), gridcolor="#444"),
-            bgcolor="rgba(0,0,0,0)",
-        ),
-        paper_bgcolor="rgba(0,0,0,0)", font_color="#cccccc",
-        legend=dict(bgcolor="rgba(0,0,0,0)"),
-        height=460, margin=dict(t=40, b=40),
-    )
-    st.plotly_chart(fig_radar, use_container_width=True)
-
-    st.markdown("""<div class="interpretation-box">
-    The radar chart gives you a bird's-eye view of how Argentina's identity as a team has 
-    shifted across four distinct chapters of their history. The Maradona era, while legendary 
-    in memory, shows a lower win rate Maradona carried a squad that wasn't always the 
-    strongest on paper, making his individual heroics even more remarkable. As you move through 
-    the Post-Maradona years and into the Messi era, the overall shape of the pentagon expands 
-    noticeably, Argentina got better in almost every dimension simultaneously. The most striking 
-    change in the Messi Peak era (2015–2025) is the dramatic improvement in goals conceded 
-    , reflecting how much more organized and defensively solid Argentina 
-    became under Scaloni's management. 
-    </div>""", unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown('<p class="section-header">World Cup Goal Difference — Edition by Edition (Waterfall)</p>',
                 unsafe_allow_html=True)
@@ -352,6 +292,68 @@ with tab1:
     better preparation, improved squad depth, and the rise of a generation of players 
     who perform at the same elite level regardless of the zip code.
     </div>""", unsafe_allow_html=True)
+
+with tab1:
+
+
+    st.markdown('<p class="section-header">Performance Radar Across Four Eras</p>',
+                unsafe_allow_html=True)
+
+    eras = {
+        "Maradona Era (1979–1990)":  (1979, 1990),
+        "Post-Maradona (1991–2004)": (1991, 2004),
+        "Messi Early (2005–2014)":   (2005, 2014),
+        "Messi Peak (2015–2025)":    (2015, 2025),
+    }
+    radar_cats  = ["Win Rate %", "Avg Goals Scored", "Avg Goals Conceded (inv)",
+                   "Clean Sheet %", "Draw Avoidance %"]
+    era_colors  = ["#75AADB","#F6BE00","#D6001C","#4CAF50"]
+
+    fig_radar = go.Figure()
+    for (era_name, (y1, y2)), color in zip(eras.items(), era_colors):
+        sub = df[(df["year"] >= y1) & (df["year"] <= y2)]
+        if len(sub) == 0:
+            continue
+        wr   = (sub["result"] == "Win").mean() * 100
+        asc  = sub["arg_scored"].mean() * 20
+        acc  = max((1 - sub["arg_conceded"].mean() / 4) * 100, 0)
+        cs   = (sub["arg_conceded"] == 0).mean() * 100
+        da   = (sub["result"] != "Draw").mean() * 100
+        vals = [wr, asc, acc, cs, da] + [wr]   # close the polygon
+        cats = radar_cats + [radar_cats[0]]
+
+        fig_radar.add_trace(go.Scatterpolar(
+            r=vals, theta=cats,
+            fill="toself", name=era_name,
+            line_color=color, fillcolor=color, opacity=0.25,
+        ))
+
+    fig_radar.update_layout(
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 100],
+                            tickfont=dict(color="#aaaaaa"), gridcolor="#333"),
+            angularaxis=dict(tickfont=dict(color="#cccccc"), gridcolor="#444"),
+            bgcolor="rgba(0,0,0,0)",
+        ),
+        paper_bgcolor="rgba(0,0,0,0)", font_color="#cccccc",
+        legend=dict(bgcolor="rgba(0,0,0,0)"),
+        height=460, margin=dict(t=40, b=40),
+    )
+    st.plotly_chart(fig_radar, use_container_width=True)
+
+    st.markdown("""<div class="interpretation-box">
+    The radar chart gives you a bird's-eye view of how Argentina's identity as a team has 
+    shifted across four distinct chapters of their history. The Maradona era, while legendary 
+    in memory, shows a lower win rate Maradona carried a squad that wasn't always the 
+    strongest on paper, making his individual heroics even more remarkable. As you move through 
+    the Post-Maradona years and into the Messi era, the overall shape of the pentagon expands 
+    noticeably, Argentina got better in almost every dimension simultaneously. The most striking 
+    change in the Messi Peak era (2015–2025) is the dramatic improvement in goals conceded 
+    , reflecting how much more organized and defensively solid Argentina 
+    became under Scaloni's management. 
+    </div>""", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ════════════════════════════════════════════════════════════════════════════
