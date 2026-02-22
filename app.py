@@ -421,7 +421,7 @@ with tab2:
     colx, coly = st.columns(2)
     with colx:
         st.markdown("""<div class="interpretation-box">
-        The box plot reveals something that pure averages would hide — the spread and 
+        The box plot reveals something that pure averages would hide the spread and 
         variability of Argentina's scoring. Copa America matches show the widest spread 
         and highest outliers, Argentina once scored 12 in a single game!, telling you 
         these were often mismatched fixtures against weaker South American opposition in 
@@ -502,7 +502,7 @@ with tab2:
         margin=dict(t=20, b=10),
     )
     st.plotly_chart(fig_3d, use_container_width=True)
-    st.caption(" Tip: Click and drag to rotate the 3D chart. Bubble size reflects win rate.")
+    
 
     st.markdown("""<div class="interpretation-box">
     This 3D scatter plots Argentina's attacking and defensive performance through time across 
