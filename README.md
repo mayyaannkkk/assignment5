@@ -1,4 +1,4 @@
-# 🇦🇷 Argentina Football Analytics Dashboard
+#  Argentina Football Analytics Dashboard
 
 **DSA 506: Visual Analytics and Communications — Spring 2026**  
 **SUNY Polytechnic Institute**
@@ -7,7 +7,7 @@ A Streamlit-powered interactive dashboard analyzing Argentina's international fo
 
 ---
 
-## 📊 Dashboard Overview
+##  Dashboard Overview
 
 **Analytical Objective:** Track Argentina's long-term international football performance across tournaments, examine goal-scoring patterns, evaluate head-to-head records against top rivals, and assess performance in high-pressure penalty shootouts.
 
@@ -15,7 +15,7 @@ A Streamlit-powered interactive dashboard analyzing Argentina's international fo
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 ├── app.py                  # Main Streamlit application
@@ -29,7 +29,7 @@ A Streamlit-powered interactive dashboard analyzing Argentina's international fo
 
 ---
 
-## 📂 Data Provenance
+##  Data Provenance
 
 ### Source
 All data comes from the publicly available Kaggle dataset:
@@ -58,7 +58,7 @@ Steps to download:
 
 ---
 
-## 🔄 Data Update Procedure
+##  Data Update Procedure
 
 When a new international match window or tournament concludes:
 
@@ -74,7 +74,7 @@ If the Kaggle dataset is no longer maintained, the same data can be sourced from
 
 ---
 
-## 🚀 Running Locally
+##  Running Locally
 
 ```bash
 # 1. Clone the repository
@@ -92,7 +92,7 @@ The app will open at `http://localhost:8501`
 
 ---
 
-## ☁️ Deploying to Streamlit Community Cloud
+##  Deploying to Streamlit Community Cloud
 
 1. Push this repository to GitHub (make it **public**)
 2. Go to https://share.streamlit.io and sign in with GitHub
@@ -101,7 +101,7 @@ The app will open at `http://localhost:8501`
 
 ---
 
-## 📈 Dashboard Features
+##  Dashboard Features
 
 - **4 Chart Types:** Bar charts, line charts, scatter plots, pie/donut charts
 - **3 Tabs:** Overall Performance | Goals & Scorers | Tournaments & Rivals
@@ -111,7 +111,7 @@ The app will open at `http://localhost:8501`
 
 ---
 
-## 👤 Author
+##  Author
 
 Mayank Waghmare  
 MS Data Science — SUNY Polytechnic Institute  
