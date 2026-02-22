@@ -8,7 +8,6 @@ import numpy as np
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Argentina Football Analytics",
-   
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -138,9 +137,9 @@ df_goals = arg_goals[
 ].copy()
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.markdown('<p class="main-title">🇦🇷 Argentina Football Analytics Dashboard</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-title">Argentina Football Analytics Dashboard</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">A deep-dive into Argentina\'s international football journey '
-            '— from historic Copa América triumphs to World Cup glory</p>', unsafe_allow_html=True)
+            ' from historic Copa América triumphs to World Cup glory</p>', unsafe_allow_html=True)
 
 # ── Top KPI Cards ─────────────────────────────────────────────────────────────
 total  = len(df)
