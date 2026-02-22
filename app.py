@@ -175,7 +175,7 @@ tab1, tab2, tab3 = st.tabs([
 # TAB 1 — Overall Performance
 # ════════════════════════════════════════════════════════════════════════════
 
-
+with tab1:
     st.markdown('<p class="section-header">World Cup Goal Difference — Edition by Edition (Waterfall)</p>',
                 unsafe_allow_html=True)
 
@@ -293,7 +293,7 @@ tab1, tab2, tab3 = st.tabs([
     who perform at the same elite level regardless of the zip code.
     </div>""", unsafe_allow_html=True)
 
-with tab1:
+
 
 
     st.markdown('<p class="section-header">Performance Radar Across Four Eras</p>',
