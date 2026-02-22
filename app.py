@@ -137,7 +137,7 @@ df["venue"] = df["is_home"].map({True: "Home", False: "Away"})
 df.loc[df["neutral"] == True, "venue"] = "Neutral"
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.markdown('<h1 class="main-title">🇦🇷 Argentina Football Analytics Dashboard</h1>',
+st.markdown('<h1 class="main-title"> Argentina Football Analytics Dashboard</h1>',
             unsafe_allow_html=True)
 st.markdown(
     '<p class="sub-title">A deep-dive into Argentina\'s international football journey '
