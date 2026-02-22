@@ -195,12 +195,12 @@ with tab1:
 
     st.markdown("""<div class="interpretation-box">
     Looking at Argentina's record decade by decade, you can really see how the team has grown into 
-    a powerhouse over time. Back in the early decades, the wins and losses were pretty balanced — 
+    a powerhouse over time. Back in the early decades, the wins and losses were pretty balanced, 
     Argentina was competitive but not yet dominant. Things started clicking in the 1940s and 1950s, 
     when the wins started piling up noticeably. The 2000s and 2010s stand out as Argentina's golden 
     era in terms of raw win numbers, which lines up with the generation that included Messi, Agüero, 
     and Di María reaching their prime. The 2020s look smaller simply because there are fewer years 
-    of data, but the win-to-loss ratio in that short stretch is the best it's ever been — a strong 
+    of data, but the win-to-loss ratio in that short stretch is the best it's ever been a strong 
     sign that the current squad is carrying that momentum forward.
     </div>""", unsafe_allow_html=True)
 
