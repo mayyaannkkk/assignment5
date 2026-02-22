@@ -173,7 +173,7 @@ tab1, tab2, tab3 = st.tabs([
 # ════════════════════════════════════════════════════════════════════════════
 with tab1:
 
-    # --- Chart 1: Win/Draw/Loss trend by decade ---
+  
     st.markdown('<p class="section-header">Win / Draw / Loss Record by Decade</p>',
                 unsafe_allow_html=True)
 
@@ -206,7 +206,6 @@ with tab1:
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Chart 2: Win rate rolling average (line chart) ---
     st.markdown('<p class="section-header">Win Rate Over Time (5-Year Rolling Average)</p>',
                 unsafe_allow_html=True)
 
@@ -239,19 +238,19 @@ with tab1:
 
     st.markdown("""<div class="interpretation-box">
     The rolling win rate line tells a fascinating story of Argentina's ups and downs. There are clear 
-    dips in the late 1950s and mid-1970s — periods when the team struggled on the international stage. 
+    dips in the late 1950s and mid-1970s, periods when the team struggled on the international stage. 
     But what jumps out most is the steady climb from around 2008 onwards, where the rolling average 
-    sits consistently above 60%. There were rough patches too — 2018 was a painful year with a 
-    group-stage exit at the World Cup — but Argentina bounced back almost immediately. The peak 
-    in the early 2020s is no coincidence; it reflects the Copa América 2021 title (Argentina's 
-    first major trophy in 28 years) and the unforgettable 2022 World Cup win in Qatar. These aren't 
-    just numbers — they represent a team that found its identity and finally delivered on its 
+    sits consistently above 60%. There were rough patches too 2018 was a painful year with a 
+    group-stage exit at the World Cup but Argentina bounced back almost immediately. The peak 
+    in the early 2020s is no coincidence; it reflects the Copa América 2021 title Argentina's 
+    first major trophy in 28 years and the unforgettable 2022 World Cup win in Qatar. These aren't 
+    just numbers  they represent a team that found its identity and finally delivered on its 
     enormous potential.
     </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Chart 3: Home vs Away win rates (grouped bar) ---
+     
     st.markdown('<p class="section-header">Home vs Away vs Neutral Performance</p>',
                 unsafe_allow_html=True)
 
@@ -275,8 +274,8 @@ with tab1:
     st.plotly_chart(fig_venue, use_container_width=True)
 
     st.markdown("""<div class="interpretation-box">
-    Argentina's home and away split reveals something interesting — while the team wins more 
-    at home (as you'd expect from any football side), their away and neutral-venue record is 
+    Argentina's home and away split reveals something interesting while the team wins more 
+    at home, as you'd expect from any football side, their away and neutral-venue record is 
     still remarkably strong. This matters a lot in international football, where World Cups and 
     Copa Américas are almost always played on neutral or semi-neutral ground. The fact that 
     Argentina maintains a winning record even without the home crowd behind them shows a mental 
@@ -292,7 +291,6 @@ with tab2:
 
     col_a, col_b = st.columns(2)
 
-    # --- Chart 4: Top 15 scorers (horizontal bar) ---
     with col_a:
         st.markdown('<p class="section-header">Top 15 Argentina Goal Scorers</p>',
                     unsafe_allow_html=True)
@@ -318,7 +316,7 @@ with tab2:
         )
         st.plotly_chart(fig_scorers, use_container_width=True)
 
-    # --- Chart 5: Goal types (penalty vs open play) pie ---
+    
     with col_b:
         st.markdown('<p class="section-header">Goal Breakdown by Type</p>',
                     unsafe_allow_html=True)
@@ -340,17 +338,17 @@ with tab2:
         )
         st.plotly_chart(fig_pie, use_container_width=True)
 
-    # Interpretations side by side
+    
     colx, coly = st.columns(2)
     with colx:
         st.markdown("""<div class="interpretation-box">
         The top scorer chart is almost impossible to look at without noticing the gulf between 
-        Messi and everyone else. With 63 goals (within this filtered dataset), he's nearly 
-        double Batistuta's 37 — and Batistuta was considered a generational striker in his own 
+        Messi and everyone else. With 63 goals, he's nearly 
+        double Batistuta's 37 and Batistuta was considered a generational striker in his own 
         right. What makes Messi's number even more impressive is that he spent years being 
         criticized for not performing for Argentina the way he did for Barcelona. The chart 
         quietly proves those critics wrong. Players like Higuaín, Agüero, and Lautaro further 
-        down the list show that Argentina has never lacked for quality in attack — yet none 
+        down the list show that Argentina has never lacked for quality in attack yet none 
         came close to matching the GOAT at the top.
         </div>""", unsafe_allow_html=True)
     with coly:
@@ -358,7 +356,7 @@ with tab2:
         The pie chart shows that the vast majority of Argentina's goals come from open play, 
         which tells you this is a team that creates chances through build-up and individual 
         brilliance rather than relying on set-pieces or spot-kicks. Penalties make up a 
-        meaningful but not dominant slice — a healthy sign that Argentina earns its goals 
+        meaningful but not dominant slice a healthy sign that Argentina earns its goals 
         the hard way. The own goals conceded by opponents are a small but notable category, 
         showing that Argentina's pressure and attacking movement sometimes forces errors even 
         without a clean finish. It all adds up to a picture of an attacking team that plays 
@@ -367,7 +365,7 @@ with tab2:
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Chart 6: Goals by minute heatmap-style histogram ---
+
     st.markdown('<p class="section-header">When Does Argentina Score? (Goal Timing Distribution)</p>',
                 unsafe_allow_html=True)
 
@@ -400,13 +398,13 @@ with tab2:
     st.markdown("""<div class="interpretation-box">
     The timing of Argentina's goals shows a very familiar pattern that football analysts call 
     "second-half surge." Goals in the 71–90 minute window are the most frequent, which makes 
-    a lot of sense — by that point, opposition defenses tire, gaps open up, and Argentina's 
+    a lot of sense, by that point, opposition defenses tire, gaps open up, and Argentina's 
     fitness and quality start to tell. There's also a solid chunk of early goals in the first 
     10-20 minutes, reflecting a team that's dangerous right from kick-off and doesn't wait 
-    around to impose itself. The relatively quieter middle portion (31–60 minutes) is typical 
+    around to impose itself. The relatively quieter middle portion is typical 
     for international football where both teams are often feeling each other out tactically. 
     The 81–90+ bracket being the highest is also a reflection of Argentina's notorious 
-    never-say-die attitude — many famous comeback goals have come in those final 
+    never-say-die attitude many famous comeback goals have come in those final 
     desperate minutes.
     </div>""", unsafe_allow_html=True)
 
@@ -416,7 +414,7 @@ with tab2:
 # ════════════════════════════════════════════════════════════════════════════
 with tab3:
 
-    # --- Chart 7: Tournament win rates (horizontal bar) ---
+ 
     st.markdown('<p class="section-header">Win Rate by Tournament Type</p>',
                 unsafe_allow_html=True)
 
@@ -447,19 +445,19 @@ with tab3:
 
     st.markdown("""<div class="interpretation-box">
     When you break down Argentina's win rate by tournament, it's clear that they've been 
-    better at some competitions than others — and the reasons are worth thinking about. 
+    better at some competitions than others, and the reasons are worth thinking about. 
     Copa América and World Cup Qualification tend to show strong win rates because Argentina 
     dominates within South American football most of the time. The FIFA World Cup win rate 
-    is lower, which makes sense — you only face the best teams in the world at a World Cup, 
+    is lower, which makes sense, you only face the best teams in the world at a World Cup, 
     so every match is a battle. Friendlies often have lower win rates too, partly because 
     teams use them to experiment with lineups and tactics. A tournament's win rate isn't 
-    just about quality — it's also about who you're playing against, and in the World Cup, 
+    just about quality, it's also about who you're playing against, and in the World Cup, 
     even a 53% win rate means you're doing well.
     </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Chart 8: Head-to-head scatter (top 10 rivals) ---
+  
     st.markdown('<p class="section-header">Argentina vs Top 10 Rivals — Head-to-Head Record</p>',
                 unsafe_allow_html=True)
 
@@ -491,25 +489,25 @@ with tab3:
 
     st.markdown("""<div class="interpretation-box">
     This scatter plot places Argentina's biggest rivals in a fascinating context. Uruguay 
-    stands out immediately — they've played each other more times than any other matchup 
+    stands out immediately they've played each other more times than any other matchup 
     in the dataset, a testament to the fierce and historic Río de la Plata rivalry. 
     Despite the sheer volume of games, Argentina holds a positive win rate against Uruguay, 
     which is no small feat given how competitive that fixture always is. Brazil, the other 
-    giant of South American football, sits with a lower Argentina win rate — showing that 
+    giant of South American football, sits with a lower Argentina win rate, showing that 
     this rivalry is genuinely two-sided and harder to dominate. Teams like Chile and Paraguay, 
-    despite being played very often, show high Argentina win rates — they're regular opponents 
+    despite being played very often, show high Argentina win rates, they're regular opponents 
     in qualification but Argentina has historically had the upper hand. The bubble size 
     (representing wins) gives you a quick sense of where Argentina's dominance is most absolute.
     </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Chart 9: Penalty shootout record ---
+ 
     st.markdown('<p class="section-header">Penalty Shootout Record</p>',
                 unsafe_allow_html=True)
 
     shoot_display = arg_shoot.copy()
-    shoot_display["Outcome"] = shoot_display["won"].map({True:"Won 🟢", False:"Lost 🔴"})
+    shoot_display["Outcome"] = shoot_display["won"].map({True:"Won", False:"Lost"})
     shoot_display["opponent"] = shoot_display.apply(
         lambda r: r["away_team"] if r["home_team"]=="Argentina" else r["home_team"], axis=1)
     shoot_display["Year"] = shoot_display["date"].dt.year
