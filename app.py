@@ -8,7 +8,7 @@ import numpy as np
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Argentina Football Analytics",
-    page_icon="🇦🇷",
+   
     layout="wide",
     initial_sidebar_state="expanded",
 )
