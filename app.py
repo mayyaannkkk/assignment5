@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main-title {
-        font-size: 2.6rem;
+        font-size: 3.8rem;
         font-weight: 800;
         color: #75AADB;
         text-align: center;
@@ -100,7 +100,7 @@ st.sidebar.markdown(
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/240px-Soccerball.svg.png"
            width="95" style="border-radius:50%; box-shadow: 0 0 14px #75AADB; background:#fff; padding:4px;">
     </div>
-    <h2 style="text-align:center; color:#75AADB; margin-top:0; font-size:1.3rem;">🇦🇷 Filters</h2>
+    <h2 style="text-align:center; color:#75AADB; margin-top:0; font-size:1.3rem;"> Filters</h2>
     """,
     unsafe_allow_html=True,
 )
@@ -141,7 +141,7 @@ st.markdown('<p class="main-title"> Argentina Football Analytics Dashboard</p>',
             unsafe_allow_html=True)
 st.markdown(
     '<p class="sub-title">A deep-dive into Argentina\'s international football journey '
-    '— from historic Copa América triumphs to World Cup glory</p>',
+    'from historic Copa América triumphs to World Cup glory</p>',
     unsafe_allow_html=True)
 
 # ── KPI Cards ─────────────────────────────────────────────────────────────────
